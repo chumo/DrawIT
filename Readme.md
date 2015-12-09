@@ -1,4 +1,5 @@
-<img src="images/logo.png" alt="DrawITLogo" style="width: 200px;"/>
+DrawIT
+------
 
 This is a *tetris-like* game written in javascript (d3 web app) using a machine learning algorithm (random forest) to identify handwritten paths.
 
