@@ -1,6 +1,9 @@
-![DrawITLogo](images/logo.png)
+<img src="images/logo.png" alt="DrawITLogo" style="width: 200px;"/>
 
 This is a *tetris-like* game written in javascript (d3 web app) using a machine learning algorithm (random forest) to identify handwritten paths.
+
+### Screen shot
+![ScreenShot](images/ScreenShot.png)
 
 ### Libraries
 - [d3.js](https://d3js.org)
