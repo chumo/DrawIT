@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding"> -->
+  <meta charset="UTF-8">
+  <meta name="description" content="d3 game">
+  <meta name="keywords" content="d3, d3.js, visualization, games">
+  <meta name="author" content="Jesús Martínez-Blanco">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <title>DRAWIT</title>
+  <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />-->
+  <link href="css/chumo.css" rel="stylesheet">
+  <!-- <link href="css/manifest.json" rel="manifest">  -->
+
+  <script src="lib/d3.min.js"></script>
+  <script src="lib/randomforest.js"></script>
+  <script src="lib/underscore-min.js"></script>
+  <script src="lib/numeric-1.2.6.min.js"></script>
+  <!-- according to http://developer.telerik.com/featured/300-ms-click-delay-ios-8/ I better include a workaround library to avoid the 300 ms mouseup delay -->
+  <script src="lib/fastclick.js"></script>
+
+  <!-- JQuery is required for tappy.js -->
+  <!-- <script src="lib/jquery-1.11.3.min.js"></script> -->
+  <!-- from https://github.com/filamentgroup/tappy/ -->
+  <!-- <script src="lib/tappy.js"></script> -->
+</head>
+
+
+<body style='text-align:center'>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <!--<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55a3a9ab5aac0b42" async="async"></script>-->
+
+  <!--  width and height of the window -->
+  <script>
+    var W = window.innerWidth;
+    var H = window.innerHeight;
+  </script>
+
+  <script>
+  if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+  }
+  </script>
+
+  <p id='author'><a href='https://github.com/chumo'>chumo &copy 2015</a></p>
+
+  <div id='container'>
+    <img src='images/papiro.png' alt='papiro' height='33.333333%' width="66%" style="position:absolute;top:0;right:.25%;">
+    <div id='falls'></div>
+    <div id='drawings'></div>
+    <div id='scorePanel'>
+      <p id='epochNumber'>epoch: 0</p>
+      <p id='scoreNumber'>score: 0</p>
+      <!-- <img src='images/next.svg' alt='next guess' height='180px' onclick='next()'> -->
+    </div>
+    <div id='gameOverPanel' class='endPanel' style="visibility:hidden;" onclick='restart()'>
+      <img src='images/GameOver.svg' alt='Game Over' width='100%'>
+    </div>
+    <div id='accomplishPanel' class='endPanel' style="visibility:hidden;" onclick='restart()'>
+      <img src='images/accomplished.svg' alt='accomplished' width='100%'>
+    </div>
+    <div id='helpPanel' style="visibility:hidden;" onclick='restart()'>
+      <p>The goal is to reach 50 epochs with the maximum score.</p>
+      <ul>
+        <li>Draw on the gray area a single path.</li>
+        <li>Every drawing will be assigned to an icon.</li>
+        <li>Click on the gray area to change the assignment.</li>
+        <!-- <li>When an epoch finishes, icons appearing more than once will score 5. Unassigned icons will score -10.</li> -->
+      </ul>
+      <p>The computer is your teammate. She is taking note of every assignment for next guesses.</p>
+      <p>Don't get her confused or you'll loose a precious time at wrong guesses!</p>
+      <p style="text-align:center;font-weight:bold;font-size:5vh;">START!</p>
+    </div>
+  </div>
+
+  <div id='header'>
+      <img src='images/logo.png' alt='logo DRAWIT' width='100%'>
+  </div>
+
+  <div class='panel'>
+    <div class='panelButton'>
+      <img id='Play' src='images/play.svg' alt='play' width='100%' onclick='restart()'>
+    </div>
+    <div class='panelButton'>
+      <img id='Help' src='images/help.svg' alt='help' width='100%' onclick='help()'>
+    </div>
+  </div>
+
+  <!-- Load some auxiliary functions -->
+  <script src="js/Aux.js"></script>
+
+  <!-- Load audio files -->
+  <!-- <script src="js/sounds.js"></script> -->
+
+  <!-- Create the svgs and so -->
+  <script src='js/Script.js'></script>
+
+  <!-- Start the game engine -->
+  <script src='js/Game.js'></script>
+
+  <!-- Train the random forest -->
+  <script src="js/TrainRF.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<svg width="640" height="300" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#aaaaff" stroke="#000000" stroke-width="0" x="0" y="0" width="640" height="300" id="svg_4"/>
+  <rect fill="#7f0000" stroke="#000000" stroke-width="0" x="148" y="163" width="348" height="95" id="svg_3"/>
+  <text fill="#7f0000" stroke="#000000" stroke-width="0" x="318" y="116" id="svg_1" font-size="101" font-family="Monospace" text-anchor="middle" xml:space="preserve" font-weight="bold">GOOD JOB!</text>
+  <text fill="#ffffff" stroke="#000000" stroke-width="0" x="319" y="234" id="svg_2" font-size="63" font-family="Sans-serif" text-anchor="middle" xml:space="preserve">RESTART</text>
+ </g>
+</svg>
