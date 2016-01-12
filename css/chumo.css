@@ -1,0 +1,202 @@
+body {
+	/*background-color: #ccccff;*/
+}
+
+#author {
+	position:absolute;
+	margin: 0px;
+	top:10px;
+	left: 10px;
+	font-size: 20px;
+}
+
+#author a {
+	text-decoration: none;
+	color:black;
+}
+
+.endPanel {
+	/*border: 5px solid red;*/
+	align-items: center;
+	position: absolute;
+	bottom: 25%;
+	left: 25%;
+	width: 50%;
+}
+
+#helpPanel {
+	position: absolute;
+	bottom: 25%;
+	left: 10%;
+	width: 80%;
+	background: #EBA891;
+	padding: 3%;
+	text-align: left;
+	font: 3vh/4vh "Helvetica";
+}
+
+#container {
+	margin: 0 auto;
+ 	position: relative;
+	width: 95vh;
+	height: 95vh;
+	border: 2px solid black;
+}
+
+#falls {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: whiteSmoke;
+	width: 33.333333%;
+	height: 100%;
+	/*border: 3px solid black;*/
+}
+
+#drawings {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: #D6D6D6;
+	width: 66.666666%;
+	height: 66.666666%;
+	/*border: 2px solid black;*/
+	cursor: url(../images/pencil_cursor.svg),auto;
+}
+
+#scorePanel {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: none;
+	width: 66.666666%;
+	height: 33.333333%;
+	font: 9vh/2vh "Impact";
+	text-align: center;
+	margin: 0px;
+}
+
+
+#svg {
+	top: 0px;
+	background: none;
+	border: 1px solid #cccccc;
+
+	width:100%;
+	height:100%;
+}
+
+#svgFalls {
+	top: 0px;
+	background: none;
+	border: 1px solid #cccccc;
+
+	width:100%;
+	height:100%;
+}
+
+#header {
+	position: absolute;
+	top:25px;
+	left:10px;
+	width: 20vw;
+}
+
+.panel {
+	/*text-align: center;*/
+	position: absolute;
+	margin: 0px;
+	top:15vw;
+	left: 0px;
+	width: 15vw;
+}
+
+.panelButton {
+	/*height: 125px;*/
+	cursor: pointer;
+}
+
+.selector {
+	padding: 5px;
+	display: inline;
+	font-size: 25px;
+	border-width: 2px;
+	border-radius: 10px;
+	border-style: solid;
+	cursor: pointer;
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/*.disk {
+	fill: red;
+	stroke: red;
+  	stroke-width: 0px;
+  	opacity: 0.5;
+}
+
+.polygon {
+  fill: blue;
+  stroke: blue;
+  stroke-width: 5px;
+  opacity: 0.5;
+}*/
+
+.static {
+  fill: red;
+  stroke: red;
+  stroke-width: 5px;
+  opacity: 0.5;
+}
+
+.nonstatic {
+  fill: blue;
+  stroke: blue;
+  stroke-width: 5px;
+  opacity: 0.5;
+}
+
+.stick {
+  fill: none;
+  stroke: blue;
+  stroke-width: 20px;
+  opacity: 0.5;
+}
+
+.spring {
+  fill: none;
+  stroke: red;
+  stroke-width: 5px;
+  opacity: 0.5;
+}
+
+
+
+.Button {
+	margin: 5px auto;
+	width: 120px;
+	height: 120px;
+	border: 2px solid black;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 6px;
+	background: #e5caca;
+	font: 20px/25px "Helvetica";
+	cursor: pointer;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
